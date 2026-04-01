@@ -207,6 +207,13 @@ nav.scrolled {
   align-items: end;
   gap: 42px;
   padding: 130px 56px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-kicker {
@@ -331,6 +338,121 @@ nav.scrolled {
   overflow: hidden;
   padding: 16px 0;
   white-space: nowrap;
+}
+
+/* ── Inauguration Section ─────────────────────────────────────────────────── */
+.inauguration-section {
+  padding: 60px 56px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.inauguration-card {
+  position: relative;
+  border: 1px solid rgba(197, 157, 217, 0.28);
+  overflow: hidden;
+  border-radius: 2px;
+  /* No max-height — let the full image height render */
+}
+
+/* Override reveal animation for the card — fade only, no vertical shift */
+.inauguration-card.reveal {
+  transform: none;
+}
+
+.inauguration-card.reveal.visible {
+  transform: none;
+}
+
+.inauguration-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(1.08) contrast(1.04);
+  transition: transform 0.6s ease;
+}
+
+.inauguration-card:hover .inauguration-img {
+  transform: scale(1.015);
+}
+
+.inauguration-overlay {
+  position: absolute;
+  inset: 0;
+  /* Edge gradients on all 4 sides for premium framed feel */
+  background:
+    linear-gradient(to top,    rgba(14, 4, 22, 0.78) 0%,   transparent 28%),
+    linear-gradient(to bottom, rgba(14, 4, 22, 0.55) 0%,   transparent 22%),
+    linear-gradient(to right,  rgba(14, 4, 22, 0.55) 0%,   transparent 18%),
+    linear-gradient(to left,   rgba(14, 4, 22, 0.55) 0%,   transparent 18%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 36px;
+  pointer-events: none;
+}
+
+.inauguration-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--mauve), var(--lavender));
+  color: var(--deep);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  align-self: flex-start;
+  font-family: 'Cinzel', serif;
+}
+
+.inauguration-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.inauguration-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 3.8vw, 52px);
+  color: var(--lavender);
+  line-height: 1.1;
+  text-shadow: 0 2px 18px rgba(10, 2, 15, 0.7);
+}
+
+.inauguration-title em {
+  color: var(--mauve);
+  font-style: normal;
+}
+
+.inauguration-meta {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(197, 157, 217, 0.8);
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .inauguration-section {
+    padding: 0 20px 60px;
+  }
+
+  .inauguration-overlay {
+    padding: 18px 20px;
+  }
+
+  .inauguration-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .inauguration-meta {
+    text-align: left;
+  }
 }
 
 .ticker-track {
@@ -670,6 +792,8 @@ nav.scrolled {
 .map-link {
   margin-top: 18px;
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
   color: var(--deep);
   background: linear-gradient(135deg, var(--mauve), var(--lavender));
@@ -677,6 +801,31 @@ nav.scrolled {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 11px 15px;
+}
+
+.contact-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  border: 1px solid rgba(197, 157, 217, 0.5);
+  color: var(--lavender);
+  background: rgba(15, 5, 22, 0.6);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 9px 11px;
+}
+
+.contact-pill:hover {
+  background: rgba(122, 63, 145, 0.36);
 }
 
 #social {
