@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import logo from './assets/logo.png'
+import inaugurationImage from './assets/Inaugration.png'
 import servicesData from './data/servicesData.json'
 import './App.css'
 
@@ -150,8 +151,9 @@ function App() {
             Grace in every <em>detail</em>
           </h1>
           <p className="hero-desc">
-            A complete beauty and care studio with category-wise services for hair,
-            skin, makeup, nails, and treatments.
+            Infinity Ladies Salon is a ladies salon and beauty parlour in
+            Kothamangalam, offering category-wise services for hair, skin,
+            makeup, nails, and treatments.
           </p>
           <div className="hero-actions">
             <a href="#categories" className="btn-main">
@@ -190,6 +192,28 @@ function App() {
               <span className="dot"></span>
             </span>
           ))}
+        </div>
+      </div>
+
+      {/* ── Grand Opening / Inauguration Section ── */}
+      <div className="inauguration-section">
+        <div className="inauguration-card reveal">
+          <img
+            src={inaugurationImage}
+            alt="Infinity Ladies Salon Grand Opening"
+            className="inauguration-img"
+          />
+          <div className="inauguration-overlay">
+            <span className="inauguration-tag">✦ Grand Opening</span>
+            <div className="inauguration-bottom">
+              <div className="inauguration-title">
+                Now Open in <em>Kothamangalam</em>
+              </div>
+              <div className="inauguration-meta">
+                Infinity Ladies Salon<br />Kothamangalam, Kerala
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -287,7 +311,7 @@ function App() {
           </p>
           <a
             className="booking-link"
-            href="https://www.instagram.com/infinityhairstudioo/"
+            href="https://www.instagram.com/infinityladiessalon"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -319,7 +343,7 @@ function App() {
         <div className="location-grid">
           <div className="map-card reveal">
             <iframe
-              title="Infinity Hair Studio Map"
+              title="Infinity Ladies Salon Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320846.0915713994!2d76.46032066866472!3d10.213397002121745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e7b02cd9d9ab%3A0x15a1329e90c12ad!2sINFINITY%20HAIR%20STUDIO!5e0!3m2!1sen!2sin!4v1774803958623!5m2!1sen!2sin"
               style={{ border: 0 }}
               allowFullScreen
@@ -339,20 +363,67 @@ function App() {
             </div>
             <div className="loc-row">
               <div className="loc-label">Working Hours</div>
-              <div className="loc-value">Mon - Sun: 9:30am onwards</div>
+              <div className="loc-value">
+                MON to SAT 9:30AM to 07:30PM<br />
+                Sunday Closed
+              </div>
             </div>
             <div className="loc-row">
               <div className="loc-label">Contact</div>
               <div className="loc-value">
-                <a href="tel:+919895515681">+91 98955 15681</a>
+                <a href="tel:+916238424024">+91 62384 24024</a>
               </div>
+              <div className="contact-actions">
+                {/* Call button */}
+                <a className="contact-pill contact-pill--call" href="tel:+916238424024">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                  </svg>
+                  Call
+                </a>
+                {/* WhatsApp button */}
+                <a
+                  className="contact-pill contact-pill--whatsapp"
+                  href="https://wa.me/916238424024?text=Hi%20Infinity%20Ladies%20Salon%2C%20I%20want%20to%20book%20an%20appointment."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+            <div className="loc-row">
+              <div className="loc-label">Email</div>
+              <div className="loc-value">
+                <a href="mailto:contactus@infinityladiessalon.com">
+                  contactus@infinityladiessalon.com
+                </a>
+              </div>
+              {/* Smart Maps link — opens Apple Maps on iOS, Google Maps elsewhere */}
               <a
-                className="map-link"
-                href="https://www.google.com/maps/place/INFINITY+HAIR+STUDIO/@10.0596747,76.6133551,17z/data=!3m1!4b1!4m6!3m5!1s0x3b07e7b02cd9d9ab:0x15a1329e90c12ad!8m2!3d10.0596747!4d76.61593!16s%2Fg%2F11h3q8hl6y?entry=ttu"
+                className="map-link map-link--branded"
+                href="https://maps.apple.com/?q=INFINITY+HAIR+STUDIO&ll=10.0596747,76.61593"
+                onClick={(e) => {
+                  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+                  if (!isIOS) {
+                    e.preventDefault()
+                    window.open(
+                      'https://www.google.com/maps/place/INFINITY+HAIR+STUDIO/@10.0596747,76.6133551,17z',
+                      '_blank'
+                    )
+                  }
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open in Google Maps
+                {/* Map pin icon */}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Open in Maps
               </a>
             </div>
           </div>
@@ -363,23 +434,33 @@ function App() {
         <div className="section-tag">Social</div>
         <h2 className="section-title social-title">Follow Infinity Ladies Saloon</h2>
         <a
-          className="ig-button"
-          href="https://www.instagram.com/infinityhairstudioo/"
+          className="ig-button ig-button--branded"
+          href="https://www.instagram.com/infinityladiessalon"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <rect x="2" y="2" width="20" height="20" rx="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          {/* Official Instagram gradient icon */}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <defs>
+              <radialGradient id="igGrad" cx="30%" cy="107%" r="150%">
+                <stop offset="0%" stopColor="#fdf497"/>
+                <stop offset="5%" stopColor="#fdf497"/>
+                <stop offset="45%" stopColor="#fd5949"/>
+                <stop offset="60%" stopColor="#d6249f"/>
+                <stop offset="90%" stopColor="#285AEB"/>
+              </radialGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igGrad)"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="white" strokeWidth="1.6"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="white"/>
           </svg>
-          @infinityhairstudioo
+          @infinityladiessalon
         </a>
       </section>
 
       <footer>
         <div>Infinity Ladies Saloon</div>
-        <div>Category-based service portfolio</div>
+        <div>infinityladiessalon.com</div>
       </footer>
 
       <div
