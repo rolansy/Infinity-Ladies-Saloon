@@ -344,7 +344,9 @@ function App() {
           <div className="map-card reveal">
             <iframe
               title="Infinity Ladies Salon Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320846.0915713994!2d76.46032066866472!3d10.213397002121745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e7b02cd9d9ab%3A0x15a1329e90c12ad!2sINFINITY%20HAIR%20STUDIO!5e0!3m2!1sen!2sin!4v1774803958623!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d125713.05902736713!2d76.5538723!3d10.0553328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07e7b2ddb3818b%3A0x213c38e05eaced13!2sINFINTY%20LADIES%20SALON!5e0!3m2!1sen!2sin!4v1775325882915!5m2!1sen!2sin"
+              width="800"
+              height="600"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -356,9 +358,10 @@ function App() {
             <div className="loc-row">
               <div className="loc-label">Address</div>
               <div className="loc-value">
-                3J58+V9 Kothamangalam, Kerala
+                3J58+Q7 Kochi, Kerala
                 <br />
-                Near Vimalagiri School, Kothamangalam Bazar, Ernakulam 686691
+                Palazhi Building, Near Tiana Gold and Vimalagiri School,
+                Kothamangalam, Kerala 686691
               </div>
             </div>
             <div className="loc-row">
@@ -405,13 +408,13 @@ function App() {
               {/* Smart Maps link — opens Apple Maps on iOS, Google Maps elsewhere */}
               <a
                 className="map-link map-link--branded"
-                href="https://maps.apple.com/?q=INFINITY+HAIR+STUDIO&ll=10.0596747,76.61593"
+                href="https://maps.apple.com/?q=INFINTY+LADIES+SALON+Kothamangalam"
                 onClick={(e) => {
                   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
                   if (!isIOS) {
                     e.preventDefault()
                     window.open(
-                      'https://www.google.com/maps/place/INFINITY+HAIR+STUDIO/@10.0596747,76.6133551,17z',
+                      'https://www.google.com/maps/search/?api=1&query=INFINTY+LADIES+SALON+Kothamangalam+Kerala',
                       '_blank'
                     )
                   }
